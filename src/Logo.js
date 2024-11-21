@@ -3,7 +3,7 @@ import './Logo.css'; // Optional for styling
 
 const Logo = () => {
   return (
-    <img src={process.env.PUBLIC_URL + './Pictures/transparent-photo-smiling-mouth.png'} className="App-logo" alt="logo" />
+    <img src={'/images/transparent-photo-smiling-mouth.png'} className="App-logo" alt="logo" />
   );
 };
 
