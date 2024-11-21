@@ -1,26 +1,28 @@
-
 .header {
+  width: auto; /* Let the header inherit the full width from App.css */
+  padding: 10px; /* Add padding around the header */
   position: sticky;
   top: 0;
-  left: 0; /* Stretch to the left edge */
-  right: 0; /* Stretch to the right edge */
   background-color: #fb577c; /* Vibrant pink */
   color: #eff0f4; /* Pale grayish-white */
-  padding: 1.5rem;
   text-align: center;
   z-index: 1000; /* Ensure it stays on top of other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for separation */
 }
 
 .header-container {
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add padding inside the content area */
+  color: #eff0f4; /* Pale grayish-white for text */
+  text-align: center; /* Center the header content */
 }
 
 .header-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Satisfy", serif;
   font-optical-sizing: auto;
   font-weight: 700; /* Bold for emphasis */
   font-size: 2.5rem;
@@ -38,7 +40,7 @@
 
 .nav-links a {
   text-decoration: none;
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", serif;
   font-weight: 400; /* Normal weight */
   color: #eff0f4;
   font-size: 1.2rem;
