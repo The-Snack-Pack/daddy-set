@@ -9,7 +9,7 @@ const TextBlockLeft = ({ title, text, overlayImage }) => {
 
       {/* Image on top of the circle */}
       <img
-        src={process.env.PUBLIC_URL + overlayImage} // Pull image from public folder
+        src={overlayImage} // Pull image from public folder
         alt="Overlay"
         className="overlay-image circle-left"
       />
