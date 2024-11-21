@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Body from './Body';
 import Logo from './Logo';
+import Visualization from './Visualization';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Body />
       <Logo />
+      <Visualization />
     </div>
   );
 }
