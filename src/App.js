@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import TextBlock from './TextBlock';
 
 function App() {
   return (
+
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header/>
       </header>
+      <TextBlock
+        text="Welcome to the Hollywood Daddies Dashboard! Dive into the data behind the 'daddy' persona and discover what makes Hollywood stars iconic."
+        imagePath="./transparent-photo-smiling-mouth.png" // Replace with your image file name
+      />
+      <img src={process.env.PUBLIC_URL + './transparent-photo-smiling-mouth.png'} className="App-logo" alt="logo" />
+
     </div>
   );
 }

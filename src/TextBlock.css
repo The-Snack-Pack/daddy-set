@@ -1,0 +1,44 @@
+.text-block-wrapper {
+  position: relative; /* Needed to position elements relative to this container */
+  display: flex;
+  align-items: center; /* Vertically align the text block and image */
+  justify-content: flex-start; /* Align items to the left */
+  margin: 2rem auto; /* Center the block horizontally with margin */
+  max-width: 700px; /* Optional: Set a max width for the container */
+}
+
+.text-block {
+  background-color: #fb577c; /* Vibrant pink */
+  color: #eff0f4; /* Pale grayish-white for text */
+  padding: 1.5rem 2rem;
+  border-radius: 20px; /* Rounded edges */
+  font-family: "Playfair Display", serif;
+  font-weight: 400; /* Normal weight */
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5); /* White shadow with transparency */
+  z-index: 1; /* Ensure the text box is above the image */
+}
+
+.overlapping-image {
+  position: relative; /* Keeps the image aligned with the text box */
+  left: -20px; /* Slightly overlap the text box from the left */
+  z-index: 2; /* Ensure the image is in front of the text box */
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Keep it circular */
+  border-radius: 50%; /* Make the image circular */
+  border: 5px solid #fb577c; /* Match the text box background */
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5); /* Optional: White glow for the image */
+}
+
+@media (max-width: 768px) {
+  .text-block-wrapper {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center both elements */
+  }
+
+  .overlapping-image {
+    left: 0; /* Reset position for centered alignment */
+    margin-bottom: -50px; /* Optional: Slight overlap when stacked */
+  }
+}
+
