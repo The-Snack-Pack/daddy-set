@@ -1,4 +1,5 @@
 .App-logo {
+  position: relative; /* Container for absolute positioning */
   height: 40vmin;
   pointer-events: none;
 }

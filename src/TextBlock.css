@@ -83,8 +83,27 @@
 }
 
 .circle-right {
-  right: 25%; /* Align center horizontally */
-  transform: translate(50%, -50%); /* Correct centering by moving forward */
+  left: 75%; /* Align center horizontally */
+  transform: translate(-50%, -50%); /* Correct centering by moving forward */
 }
 
+/* Define the wiggle animation */
+@keyframes wiggle {
+  0%, 100% {
+    transform: translate(-50%,-50%) rotate(0deg); /* Neutral position */
+  }
+  25% {
+    transform: translate(-50%,-50%) rotate(-5deg); /* Tilt slightly left */
+  }
+  50% {
+    transform: translate(-50%,-50%) rotate(5deg); /* Tilt slightly right */
+  }
+  75% {
+    transform: translate(-50%,-50%) rotate(-5deg); /* Tilt slightly left again */
+  }
+}
 
+.overlay-image:hover {
+  animation: wiggle 0.5s ease-in-out; /* Animation duration and easing */
+  transform-origin: center; /* Ensures the rotation is around the center */
+}

@@ -1,12 +1,11 @@
 .header {
-  width: auto; /* Let the header inherit the full width from App.css */
-  padding: 10px; /* Add padding around the header */
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: #fb577c; /* Vibrant pink */
-  color: #eff0f4; /* Pale grayish-white */
-  text-align: center;
+  left: 0;
+  width: 100%; /* Let the header inherit the full width from App.css */
   z-index: 1000; /* Ensure it stays on top of other elements */
+  background-color: #fb577c; /* Vibrant pink */
+  transition: top 0.3s ease; /* Smooth transition */
 }
 
 .header-container {
@@ -15,19 +14,21 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto; /* Center the content horizontally */
-  padding: 20px; /* Add padding inside the content area */
+  margin: 0 auto 5px auto; /* Center the content horizontally */
+  padding: 10px; /* Add padding inside the content area */
   color: #eff0f4; /* Pale grayish-white for text */
   text-align: center; /* Center the header content */
 }
 
 .header-title {
+  text-decoration: none; /* Remove underline */
   font-family: "Satisfy", serif;
   font-optical-sizing: auto;
   font-weight: 700; /* Bold for emphasis */
   font-size: 2.5rem;
   color: #eff0f4;
   margin: 0;
+  transition: color 0.3s ease;
 }
 
 .header-nav ul {
@@ -48,5 +49,44 @@
 }
 
 .nav-links a:hover {
-  color: #f0f1f5; /* Slightly lighter hover effect */
+  color: #ffc3d0; /* Light pastel pink */
+}
+
+.hidden {
+  top: -100px; /* Move the header off-screen */
+}
+
+.cavil-corner {
+  position: fixed; /* Keeps the image fixed in place */
+  left: 0; /* Adjust the horizontal position */
+  width: 200px; /* Adjust the size of the image */
+  height: auto; /* Maintain the aspect ratio */
+  z-index: 10; /* Ensure the image is above other content */
+  transform: scaleX(-1); /* Flips the image horizontally */
+  transition: width 0.3s ease, bottom 0.3s ease; /* Smooth transition */
+  bottom: -220px; /* Move the header off-screen */
+}
+
+.hide-cavil {
+  transition: bottom 0.3s ease; /* Smooth transition */
+  bottom: 0; /* Adjust the vertical position */
+}
+
+.peek-a-boo-pascal {
+  position: fixed; /* Keeps the image fixed in place */
+  right: 0; /* Adjust the horizontal position */
+  width: 150px; /* Adjust the size of the image */
+  height: auto; /* Maintain the aspect ratio */
+  z-index: 10; /* Ensure the image is above other content */
+  transition: bottom 0.4s ease; /* Smooth transition */
+  bottom: -325px;
+}
+
+.header-title:hover {
+  color: #ffc3d0; /* Light pastel pink */
+  cursor:pointer;
+}
+
+.header-title:hover ~ .peek-a-boo-pascal {
+  bottom: 0; /* Bring Pascal into view */
 }

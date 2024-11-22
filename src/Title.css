@@ -1,0 +1,35 @@
+/* TitleRight Banner Styling */
+.title-banner {
+  top: -12rem; /* Place the banner at the top of its container */
+  justify-content: center; /* Align content to the left */
+  font-family: "Pacifico", cursive;
+  font-size: 7rem; /* Larger font size for the title */
+  position: absolute; /* Position the banner absolutely */
+  z-index: 10; /* Bring the banner to the front */
+}
+
+.title-link {
+  font-size: 7rem; /* Large font size */
+  font-weight: bold; /* Bold text */
+  color: #fb577c; /* White text */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover transition */
+  text-shadow: 2px 2px 0px #f0f1f5, /* Black border effect */
+  -2px -2px 0px #f0f1f5,
+  2px -2px 0px #f0f1f5,
+  -2px 2px 0px #f0f1f5;
+}
+
+.title-link:hover {
+  color: #7fbee1; /* Light pink hover effect */
+}
+
+.title-banner-right {
+  right: 37%; /* Move to the left of the center */
+  transform: translateX(50%); /* Adjust for proper centering */
+}
+
+.title-banner-left {
+  left: 37%; /* Move to the left of the center */
+  transform: translateX(-50%); /* Adjust for proper centering */
+}
