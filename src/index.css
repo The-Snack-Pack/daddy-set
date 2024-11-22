@@ -4,6 +4,8 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif; /* Lato as the primary font */
+  background-color: #ffc3d0; /* Light pastel pink */
+  color: #fb577c; /* Vibrant pink */
 }
 
 #root {

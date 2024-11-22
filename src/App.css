@@ -2,18 +2,7 @@
 .App {
   width: 100%;
   text-align: center;
-
-  background-color: #ffc3d0; /* Light pastel pink */
-  color: #333; /* Default text color */
-}
-
-.foreground-image {
-  position: fixed; /* Keeps the image fixed in place */
-  bottom: 0; /* Adjust the vertical position */
-  right: 0; /* Adjust the horizontal position */
-  width: 200px; /* Adjust the size of the image */
-  height: auto; /* Maintain the aspect ratio */
-  z-index: 10; /* Ensure the image is above other content */
+  margin-top: 100px;
 }
 
 .content {
@@ -21,3 +10,11 @@
   z-index: 1; /* Ensure content scrolls behind the image */
 }
 
+/* Apply the font globally or to specific elements */
+.Body {
+  position: relative; /* Container for absolute positioning */
+  width: auto;
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  margin-top: 6rem;
+}

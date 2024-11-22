@@ -1,9 +1,0 @@
-/* Apply the font globally or to specific elements */
-.Body {
-  margin-top: 3rem; /* Adds spacing at the very top */
-  margin-bottom: 5rem; /* Adds spacing at the very top */
-  width: auto;
-
-  display: grid;
-  place-items: center; /* Centers both horizontally and vertically */
-}
