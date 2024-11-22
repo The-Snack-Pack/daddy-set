@@ -1,11 +1,12 @@
 import React from 'react';
 import './Header.css'; // Optional for styling
+import { LuSparkles } from "react-icons/lu";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <h1 className="header-title">Hollywood Daddies Dashboard</h1>
+        <h1 className="header-title"><LuSparkles />Hollywood Daddies</h1>
         <nav className="header-nav">
           <ul className="nav-links">
             <li><a href="#about">About</a></li>
