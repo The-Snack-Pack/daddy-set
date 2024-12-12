@@ -3,24 +3,25 @@ import Papa from 'papaparse';
 
 const CSVReader = ({ onDataParsed }) => {
   const [csvData, setCsvData] = useState([]);
-  const [topData, setTopData] = useState([]);
 
   useEffect(() => {
-    fetch('/data.csv').then(answer => answer.text())
-      .then((text) => {
-        Papa.parse(text, {
-          complete: (result) => {
-            console.log(result);
-            setCsvData(result.data);
-            setTopData(result.data.slice(0, 10));
-            onDataParsed(result.data);
-          },
-          header: true,
-          skipEmptyLines: true,
-        });
-      })
-      .catch((error) => console.error('Error reading CSV file:', error));
-  }, [onDataParsed]);
+    if (csvData.length === 0) {
+      fetch('/daddies_new.csv')
+          .then((response) => response.text())
+          .then((text) => {
+            Papa.parse(text, {
+              complete: (result) => {
+                console.log('CSV Parsing Complete:', result);
+                setCsvData(result.data);
+                onDataParsed(result.data);
+              },
+              header: true,
+              skipEmptyLines: true,
+            });
+          })
+          .catch((error) => console.error('Error reading CSV file:', error));
+    }
+  }, [csvData, onDataParsed]);
 
   return null;
 };

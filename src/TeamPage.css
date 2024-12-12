@@ -1,0 +1,95 @@
+/* TeamPage.css */
+.team-page {
+  position: relative;
+  font-family: "Lato", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin-top: 100px;
+
+}
+
+.square-frame {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  grid-gap: 0px;
+  width: 100%;
+  max-width: 600px; /* Adjust size of the frame */
+  aspect-ratio: 1; /* Ensures the frame is a square */
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fb577c ;
+  /*overflow: hidden;*/
+  /*border: 2px solid #ccc; /* Optional border for squares */
+  /*border-radius: 8px; /* Rounded corners */
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.square img, .square .color-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(98, 34, 49, 0.6); /* Semi-transparent black */
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.team-banner {
+  font-family: "Satisfy", serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(98, 34, 49, 0); /* Semi-transparent black */
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 6rem;
+  transition: all 0.3s ease;
+}
+
+.square img:hover, .square:hover, .banner:hover, .team-banner:hover {
+  background: #7fbee1; /* Semi-transparent black */
+}
+
+
+/* TitleRight Banner Styling */
+.title-link {
+  font-size: 7rem; /* Large font size */
+  font-weight: bold; /* Bold text */
+  color: #fb577c; /* White text */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover transition */
+  text-shadow: 2px 2px 0px #f0f1f5, /* Black border effect */
+  -2px -2px 0px #f0f1f5,
+  2px -2px 0px #f0f1f5,
+  -2px 2px 0px #f0f1f5;
+}
+
+.title-link:hover {
+  color: #7fbee1; /* Light pink hover effect */
+}
+
+.team-page-title {
+  top: 0rem; /* Place the banner at the top of its container */
+  justify-content: center; /* Align content to the left */
+  font-family: "Pacifico", cursive;
+  font-size: 7rem; /* Larger font size for the title */
+  position: absolute; /* Position the banner absolutely */
+  z-index: 10; /* Bring the banner to the front */
+  right: 37%; /* Move to the left of the center */
+  transform: translateX(50%); /* Adjust for proper centering */
+}
