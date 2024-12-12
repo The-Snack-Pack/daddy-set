@@ -13,7 +13,7 @@
 .text-block {
   z-index: 1; /* Default stacking order */
   height: auto; /* Fixed height for the rectangle */
-  width: 50%; /* Fixed width for the rectangle */
+  width: 75%; /* Fixed width for the rectangle */
   background-color: #fb577c; /* Vibrant pink */
   color: #eff0f4; /* Pale grayish-white for text */
   padding: 1.5rem 1rem;
@@ -78,12 +78,12 @@
 }
 
 .circle-left {
-  left: 25%; /* Move to the left of the center */
+  left: 20%; /* Move to the left of the center */
   transform: translate(-50%,-50%); /* Adjust for proper centering */
 }
 
 .circle-right {
-  left: 75%; /* Align center horizontally */
+  left: 80%; /* Align center horizontally */
   transform: translate(-50%, -50%); /* Correct centering by moving forward */
 }
 

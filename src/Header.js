@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Header.css'; // Optional for styling
-import { LuSparkles } from "react-icons/lu";
+import { LuSparkles } from "react-icons/lu"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -26,9 +27,9 @@ const Header = () => {
         <a href="https://github.com/The-Snack-Pack/daddy-set" target="_blank" className="header-title"><LuSparkles />Hollywood Daddies</a>
         <nav className="header-nav">
           <ul className="nav-links">
-            <li><a href={"#about"}>About</a></li>
-            <li><a href={"#visualization"}>Visualizations</a></li>
-            <li><a href={"#team"}>Meet the Data Girls</a></li>
+            <li><Link to="/">Home</Link></li>
+            <Link to="/team">Team</Link>
+            <Link to="/source">Sources</Link>
           </ul>
         </nav>
 
