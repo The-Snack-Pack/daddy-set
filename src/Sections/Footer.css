@@ -1,5 +1,4 @@
 .footer {
-  margin-top: 50px;
   width: auto; /* Let the header inherit the full width from App.css */
   padding: 25px; /* Add padding around the header */
   bottom: 0;

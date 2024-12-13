@@ -1,12 +1,13 @@
 .team-page {
-  max-width: 900px;
-  display: flex;
+  display:grid;
+  height: 100%;
+  width: 100%;
   text-align: center;
   justify-content: center; /* Center horizontally */
-  margin-top: 15vh;
 }
 
 .team-grid-container {
+  max-width: 900px;
   background-color: #f8f9fa; /* White */
   display: grid;
   position: relative;
@@ -17,7 +18,7 @@
   padding: 3vh;
 }
 
-.text-rectangle {
+.color-rectangle {
   background-color: #fb577c; /* Highlight color */
   color: white; /* Text color */
   display: flex;
@@ -27,21 +28,11 @@
   border-radius: 8px; /* Rounded corners for images */
 }
 
-.rotated-text {
-  font-family: "Satisfy", serif;
-  font-size: 200%;
-  font-weight: bold;
-  writing-mode: vertical-rl; /* Vertical text flow */
-  text-orientation:sideways;
-  transform: rotate(180deg); /* Rotate the text to read from the right. */
-}
-
 .image-grid {
   display: grid;
   grid-template-rows: repeat(3, 1fr); /* Three rows for three images */
   gap: 3vh;
   height: 100%;
-  width: 100%
 }
 
 .image-box {
@@ -49,73 +40,62 @@
   overflow: hidden;
   border-radius: 8px; /* Rounded corners for images */
   position: relative;
+  transition: all 0.5s ease;
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensure the image covers the box without distortion */
+  transition: all 0.5s ease;
 }
 
-
-.after:hover {
-
-}
-
-.banner {
+.overlay {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(98, 34, 49, 0.6); /* Semi-transparent black */
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.team-banner {
-  font-family: "Satisfy", serif;
-  position: absolute;
+  font-family: "Lato", serif;
   top: 0;
-  bottom: 0;
+  right: 90%;
+  height: 100%;
   width: 100%;
-  background: rgba(98, 34, 49, 0); /* Semi-transparent black */
-  color: white;
+  background: rgba(127, 190, 225, 0.8); /* Semi-transparent sky blue */
+  color: rgba(127, 190, 225, 0.8);
+  justify-content: center;
   text-align: center;
-  font-size: 2rem;
-  padding-top: 6rem;
-  transition: all 0.3s ease;
+  font-size: min(3vh, 3vw); /* Dynamic font size based on height and width */
+  transition: all 0.5s ease;
 }
 
-.square img:hover, .square:hover, .banner:hover, .team-banner:hover {
-  background: #7fbee1; /* Semi-transparent black */
+.image-box:hover .overlay {
+  right: 0;
+  transition: all 0.5s ease;
+  color: rgba(255, 255, 255, 1);
 }
 
-
-/* TitleRight Banner Styling */
-.title-link {
-  font-size: 7rem; /* Large font size */
-  font-weight: bold; /* Bold text */
-  color: #fb577c; /* White text */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth hover transition */
-  text-shadow: 2px 2px 0px #f0f1f5, /* Black border effect */
-  -2px -2px 0px #f0f1f5,
-  2px -2px 0px #f0f1f5,
-  -2px 2px 0px #f0f1f5;
+.text-title-link {
+  font-family: "Satisfy", serif;
+  font-weight: bold;
+  font-size: 5vw;
+  color: white;
+  text-decoration: none;
 }
 
-.title-link:hover {
-  color: #7fbee1; /* Light pink hover effect */
+.text-title-link:hover {
+  color: #ffc3d0; /* Light pastel pink */
 }
 
-.team-page-title {
-  top: 0rem; /* Place the banner at the top of its container */
-  justify-content: center; /* Align content to the left */
-  font-family: "Pacifico", cursive;
-  font-size: 7rem; /* Larger font size for the title */
-  position: absolute; /* Position the banner absolutely */
-  z-index: 10; /* Bring the banner to the front */
-  right: 37%; /* Move to the left of the center */
-  transform: translateX(50%); /* Adjust for proper centering */
+.text-title {
+  font-family: "Satisfy", serif;
+  font-weight: bold;
 }
+
+.text-para {
+  font-family: "Lato", serif;
+  font-weight: normal;
+}
+
+.text-rotated {
+  writing-mode: vertical-rl; /* Vertical text flow */
+  text-orientation:sideways;
+  transform: rotate(180deg); /* Rotate the text to read from the right. */
+}
+

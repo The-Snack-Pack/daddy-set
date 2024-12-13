@@ -1,11 +1,13 @@
 .header {
-  position: fixed;
+  margin-bottom:0;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%; /* Let the header inherit the full width from App.css */
+  width: 100vw; /* Let the header inherit the full width from App.css */
   z-index: 1000; /* Ensure it stays on top of other elements */
   background-color: #fb577c; /* Vibrant pink */
   transition: top 0.3s ease; /* Smooth transition */
+
 }
 
 .header-container {
