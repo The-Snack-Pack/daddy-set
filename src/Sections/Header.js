@@ -28,8 +28,8 @@ const Header = () => {
         <nav className="header-nav">
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
-            <Link to="/team">Team</Link>
-            <Link to="/source">Sources</Link>
+            <Link to="/Team">Team</Link>
+            <Link to="/Sources">Sources</Link>
           </ul>
         </nav>
 

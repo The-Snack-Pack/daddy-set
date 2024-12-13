@@ -1,0 +1,110 @@
+.viz {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin: 0; /* Center the container itself */
+  border-radius: 12px;
+}
+
+
+/* Adjusted CSS for new image-container */
+.image-container {
+  margin:0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Hide overflow for cleaner design */
+}
+
+.profile-iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove borders */
+}
+
+/* Carousel Styling */
+.carousel-container {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 1);
+  color: #7fbee1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 20;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #7fbee1;
+}
+
+/* Profile Card Styling */
+.profile {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 2fr; /* Two columns: 1 part text, 2 parts images */
+  gap: 5vh;
+  padding: 5vh;
+  background: linear-gradient(to right, #add8e6, white);
+  border-radius: 15px;
+  margin: 3vh;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.profileInfo h1 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profileInfo h2 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: black;
+}
+
+.profileInfo2 h2 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: black;
+}

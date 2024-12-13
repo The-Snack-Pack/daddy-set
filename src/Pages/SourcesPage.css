@@ -1,0 +1,92 @@
+.sources-page {
+  display:grid;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.center-page {
+  display:grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+}
+
+.title-banner {
+  font-family: "Pacifico", cursive;
+  font-size: min(10vh, 8vw); /* Larger font size for the title */
+  /*z-index: 10; /* Bring the banner to the front */
+  font-weight: bold; /* Bold text */
+  color: #fb577c;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover transition */
+  text-shadow: 3px 3px 0px #f0f1f5,
+  -3px -3px 0px #f0f1f5,
+  3px -3px 0px #f0f1f5,
+  -3px 3px 0px #f0f1f5;
+  margin-bottom: 0;
+}
+
+.title-banner-small {
+  font-size: max(5vh, 3vw); /* Larger font size for the title */
+}
+
+.title-banner:hover{
+  color: #7fbee1;
+}
+
+.source-grid-container {
+  display: grid;
+  background-color: white; /* White */
+  border-radius: 8px; /* Rounded corners for images */
+  padding: 3vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  gap: 3vh;
+  width: 100%;
+}
+
+.source-grid-box {
+  background-color: #ffc3d0;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.inner-box {
+  padding: 10px 50px 10px 50px;
+  text-align: left;
+}
+
+
+.citation-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.citation-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+
+}
+
+.citation-list li::before {
+  content: "♥";
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fb577c;
+}
+
+.citation-list a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.citation-list a:hover {
+  text-decoration: underline;
+}

@@ -5,7 +5,6 @@ import { FaBowlFood } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="footer">
-
       <div className="footer-container">
         <h1 className="footer-title">
           <FaBowlFood />
@@ -13,9 +12,6 @@ const Footer = () => {
           The Snack Pack
         </h1>
       </div>
-
-
-
     </footer>
   );
 };

@@ -1,0 +1,97 @@
+.home-page {
+  display:grid;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center; /* Center horizontally */
+}
+
+.home-grid-container {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  background-color: #f8f9fa; /* White */
+  border-radius: 12px; /* Rounded corners for images */
+  grid-template-columns: 3fr; /* Two columns: 1 part text, 2 parts images */
+  gap: 5vh;
+  padding: 5vh;
+}
+
+.color-rectangle {
+  background-color: #fb577c; /* Highlight color */
+  color: white; /* Text color */
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.viz-grid-container {
+  display: grid;
+
+  gap: 5vh;
+  width: 100%;
+}
+
+.text-container {
+  padding: 3vh 5vh 0 5vh;
+}
+
+.descript-text {
+  text-align: left;
+}
+
+.daddy-grid {
+  display: grid;
+  width: 100%;
+  background-color: #fb577c;
+  color: white;
+  border-radius: 12px;
+}
+
+.age-grid {
+  display: grid;
+  width: 100%;
+  background-color: #fb577c;
+  color: white;
+  border-radius: 12px;
+}
+
+.family-grid {
+  display: grid;
+  width: 100%;
+  background-color: #fb577c;
+  color: white;
+  border-radius: 12px;
+}
+
+.text-title-link {
+  font-family: "Satisfy", serif;
+  font-weight: bold;
+  font-size: 5vw;
+  color: white;
+  text-decoration: none;
+}
+
+.text-title-link:hover {
+  color: #ffc3d0; /* Light pastel pink */
+}
+
+.text-title {
+  font-family: "Satisfy", serif;
+  font-weight: bold;
+}
+
+.text-para {
+  font-family: "Lato", serif;
+  font-weight: normal;
+}
+
+.text-rotated {
+  writing-mode: vertical-rl; /* Vertical text flow */
+  text-orientation:sideways;
+  transform: rotate(180deg); /* Rotate the text to read from the right. */
+}
