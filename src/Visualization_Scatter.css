@@ -1,0 +1,108 @@
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.profileImg {
+  margin-left: 50px;
+}
+
+.profileInfo {
+  flex: 1;
+  word-wrap: break-word;
+}
+
+.carousel-container {
+  position: relative;
+  width: 540px;
+  height: 300px;
+  margin-left: 50px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* InfoCard styling */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #add8e6, #dda0dd);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px auto;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+
+.profileInfo h1 {
+  font-size: 24px;
+  color: #b33951; /* Beautiful deep rose for headings */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profileInfo h2 {
+  font-size: 24px;
+  color: #b33951; /* Beautiful deep rose for headings */
+
+  padding-bottom: 10px;
+}
+
+.profileInfo2 h2 {
+  font-size: 24px;
+  color: #b33951; /* Beautiful deep rose for headings */
+}
+
+
+
+
+
