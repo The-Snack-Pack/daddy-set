@@ -1,9 +1,14 @@
 import React from 'react';
+import TextBlockLeft from '../Elements/TextBlockLeft';
+import TextBlockRight from'../Elements/TextBlockRight';
 
-function Home() {
+import Visualization_Scatter from '../Visualizations/Visualization_Scatter';
+import Visualization_Age from '../Visualizations/Visualization_Age';
+import Visualization_Bubble from '../Visualizations/Visualization_Bubble';
+
+const HomePage = () => {
   return (
     <div className="Body">
-      <TitleRight text="About" anchor="about" />
       <TextBlockLeft
         title="What makes an actor “Daddy”?"
         text="We want to show how being a “daddy” can totally change an actor’s public image and the roles they get offered. The men in the data were already once mentioned as being a “daddy”... so let’s compare the actor’s Ranker (best male actors) rating to the IMDb average of the ratings from their top 4 movies they are known for. By comparing a public ranking of best male actors to their average rating of movies they were known for. We can visualize a trend in popularity and film ratings."
@@ -28,8 +33,8 @@ function Home() {
         overlayImage="/images/Cartier-Tank-Photo-by-Michael-J-Fox-768x955.png"
       />
 
-      <TitleLeft text="Visualizations" anchor="visualization" />
-
     </div>
   );
 }
+
+export default HomePage;
