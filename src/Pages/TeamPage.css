@@ -1,39 +1,65 @@
-/* TeamPage.css */
 .team-page {
-  position: relative;
-  font-family: "Lato", serif;
+  max-width: 900px;
   display: flex;
+  text-align: center;
+  justify-content: center; /* Center horizontally */
+  margin-top: 15vh;
+}
+
+.team-grid-container {
+  background-color: #f8f9fa; /* White */
+  display: grid;
+  position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  margin-top: 100px;
-
+  grid-template-columns: 1fr 2fr; /* Two columns: 1 part text, 2 parts images */
+  gap: 3vh;
+  padding: 3vh;
 }
 
-.square-frame {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-  grid-gap: 0px;
-  width: 100%;
-  max-width: 600px; /* Adjust size of the frame */
-  aspect-ratio: 1; /* Ensures the frame is a square */
-}
-
-.square {
+.text-rectangle {
+  background-color: #fb577c; /* Highlight color */
+  color: white; /* Text color */
+  display: flex;
   position: relative;
-  width: 100%;
+  justify-content: center;
   height: 100%;
-  background-color: #fb577c ;
-  /*overflow: hidden;*/
-  /*border: 2px solid #ccc; /* Optional border for squares */
-  /*border-radius: 8px; /* Rounded corners */
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners for images */
 }
 
-.square img, .square .color-background {
+.rotated-text {
+  font-family: "Satisfy", serif;
+  font-size: 200%;
+  font-weight: bold;
+  writing-mode: vertical-rl; /* Vertical text flow */
+  text-orientation:sideways;
+  transform: rotate(180deg); /* Rotate the text to read from the right. */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); /* Three rows for three images */
+  gap: 3vh;
+  height: 100%;
+  width: 100%
+}
+
+.image-box {
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners for images */
+  position: relative;
+}
+
+.image-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensure the image covers the box without distortion */
+}
+
+
+.after:hover {
+
 }
 
 .banner {
