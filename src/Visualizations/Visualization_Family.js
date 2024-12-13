@@ -2,8 +2,9 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 import CSVReader from './CSVReader';
 import { useState, useEffect } from 'react';
+import './Visualization_Family.css'
 
-const Visualization_Bubble = () => {
+const Visualization_Family = () => {
   const [actorData, setActorData] = useState([{
     x: [],
     y: [],
@@ -86,4 +87,4 @@ const Visualization_Bubble = () => {
   );
 };
 
-export default Visualization_Bubble;
+export default Visualization_Family;

@@ -1,8 +1,8 @@
 .text-block-wrapper {
   position: relative; /* Container for absolute positioning */
-  min-width: 700px;
-  max-width: 900px;
-  max-height: 200px;
+  min-width: 50vw;
+  max-width: 75vw;
+  max-height: 20vh;
   margin: 1rem;
   display: flex;
   align-items: center; /* Align items vertically */

@@ -1,0 +1,92 @@
+
+.carousel-container {
+  position: relative;
+  width: 60%;
+  height: 40vh;
+  margin-left: 50px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #7fbee1;
+}
+
+/* InfoCard styling */
+.profile {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 2fr; /* Two columns: 1 part text, 2 parts images */
+  gap: 3vh;
+  padding: 3vh;
+  background: linear-gradient(to right, #add8e6, white);
+  border-radius: 15px;
+  margin: 3vh;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.profileInfo h1 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: #7fbee1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profileInfo h2 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: #7fbee1;
+}
+
+.profileInfo2 h2 {
+  font-size: 24px;
+  font-family: "Pacifico", cursive;
+  color: #7fbee1;
+}
+
+
+
+
+

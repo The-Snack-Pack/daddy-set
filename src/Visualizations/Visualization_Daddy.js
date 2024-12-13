@@ -6,10 +6,10 @@ import InfoCard from './InfoCard';
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { SlCalender } from "react-icons/sl";
 import { FaStar } from "react-icons/fa6";
-import "./Visualization_Scatter.css"
+import "./Visualization_Daddy.css"
 
 
-const Visualization_Scatter = () => {
+const Visualization_Daddy = () => {
 
   const [actorData, setActorData] = useState([]);
   const [personalProfile, setPersonalProfile] = useState(null)
@@ -193,4 +193,4 @@ const Visualization_Scatter = () => {
   );
 };
 
-export default Visualization_Scatter;
+export default Visualization_Daddy;
