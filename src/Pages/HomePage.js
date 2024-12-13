@@ -1,11 +1,23 @@
 import React from 'react';
 import './HomePage.css'
-import TextBlockLeft from '../Elements/TextBlockLeft';
-import TextBlockRight from'../Elements/TextBlockRight';
 
-import Visualization_Daddy from '../Visualizations/Visualization_Daddy';
-import Visualization_Age from '../Visualizations/Visualization_Age';
-import Visualization_Family from '../Visualizations/Visualization_Family';
+import VisualizationDaddy from '../Visualizations/VisualizationDaddy';
+import VisualizationAge from '../Visualizations/VisualizationAge';
+import VisualizationFamily from '../Visualizations/VisualizationFamily';
+
+import {
+  BiHeart,
+  BiSun,
+  BiSolidCameraMovie,
+} from "react-icons/bi";
+import {
+  FaCrown,
+  FaWineGlassAlt,
+  FaWineGlass,
+} from "react-icons/fa";
+import { TbSparkles } from "react-icons/tb";
+import { RiHandHeartLine } from "react-icons/ri";
+
 
 const HomePage = () => {
   return (
@@ -17,30 +29,42 @@ const HomePage = () => {
 
           <div className="daddy-grid">
             <div className="text-container">
-              <h1 className="title-text">What makes an actor “Daddy”?</h1>
-              <p className="descript-text">We want to show how being a “daddy” can totally change an actor’s public image and the roles they get offered. The men in the data were already once mentioned as being a “daddy”... so let’s compare the actor’s Ranker (best male actors) rating to the IMDb average of the ratings from their top 4 movies they are known for. By comparing a public ranking of best male actors to their average rating of movies they were known for. We can visualize a trend in popularity and film ratings.</p>
+              <h1 className="text-title"><TbSparkles /> What makes an actor “Daddy”? <TbSparkles /></h1>
+              <p className="descript-text">
+                This fabulous graph is your VIP ticket into the glittering world of
+                Hollywood’s favorite daddies. Each sparkly heart{" "}
+                <BiHeart /> represents an iconic actor, with their{" "}
+                <em>IMDb ratings</em> on the <strong>X-axis</strong> and their{" "}
+                <strong>Best Male Actor rankings</strong> on the <strong>Y-axis</strong>{" "}
+                <FaCrown />). But wait, there’s more! The hearts’ colors are a{" "}
+                <strong>Viridis gradient</strong> that shows each daddy's age—ranging from
+                mysterious deep purples <FaWineGlassAlt /> to dazzling sunny yellows{" "}
+                <BiSun />. Hover over a heart to see all the juicy details, including their
+                ranking, age, and top movie ratings <BiSolidCameraMovie />. So grab a glass of rosé <FaWineGlass />, dive in, and find out which
+                daddy’s energy sparkles the most! <TbSparkles /> <RiHandHeartLine />
+              </p>
             </div>
-            <Visualization_Daddy />
+            <VisualizationDaddy />
 
           </div>
 
           <div className="age-grid">
             <div className="text-container">
-              <h1 className="title-text">It’s the Vibe, Not the Years</h1>
+              <h1 className="text-title"><TbSparkles /> It’s the Vibe, Not the Years <TbSparkles /></h1>
               <p className="descript-text">How old is too old, or is “daddy” all about the vibe?</p>
             </div>
 
-            <Visualization_Age />
+            <VisualizationAge />
 
           </div>
 
           <div className="family-grid">
             <div className="text-container">
-              <h1 className="title-text">Fam Life vs. Fame</h1>
+              <h1 className="text-title"><TbSparkles /> Fam vs. Fame <TbSparkles /></h1>
               <p className="descript-text">Welcome to the Hollywood Daddies Dashboard! Dive into the data behind the 'daddy' persona and discover what makes Hollywood stars iconic.</p>
             </div>
 
-            <Visualization_Family />
+            <VisualizationFamily />
 
           </div>
         </div>

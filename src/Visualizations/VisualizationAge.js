@@ -2,9 +2,9 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 import CSVReader from './CSVReader';
 import { useState, useEffect } from 'react';
-import './Visualization_Age.css';
+import './VisualizationAge.css';
 
-const Visualization_Age = () => {
+const VisualizationAge = () => {
   const [actorData, setActorData] = useState([]);
 
   const handleDataParsed = (data) => {
@@ -82,4 +82,4 @@ const Visualization_Age = () => {
   );
 };
 
-export default Visualization_Age;
+export default VisualizationAge;

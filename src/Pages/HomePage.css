@@ -37,7 +37,11 @@
 }
 
 .text-container {
-  padding: 20px;
+  padding: 3vh 5vh 0 5vh;
+}
+
+.descript-text {
+  text-align: left;
 }
 
 .daddy-grid {
@@ -46,7 +50,6 @@
   background-color: #fb577c;
   color: white;
   border-radius: 12px;
-
 }
 
 .age-grid {
