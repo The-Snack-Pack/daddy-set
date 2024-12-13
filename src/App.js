@@ -11,20 +11,20 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header/>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Home" element={<HomePage />} />
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/Team" element={<TeamPage />} />
-          <Route path="/TeamPage" element={<TeamPage />} />
-          <Route path="/Sources" element={<SourcesPage />} />
-          <Route path="/SourcesPage" element={<SourcesPage />} />
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/Home" element={<HomePage/>}/>
+          <Route path="/HomePage" element={<HomePage/>}/>
+          <Route path="/Team" element={<TeamPage/>}/>
+          <Route path="/TeamPage" element={<TeamPage/>}/>
+          <Route path="/Sources" element={<SourcesPage/>}/>
+          <Route path="/SourcesPage" element={<SourcesPage/>}/>
         </Routes>
         <Footer/>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
