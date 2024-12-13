@@ -7,12 +7,13 @@
 }
 
 .team-grid-container {
-  max-width: 900px;
-  background-color: #f8f9fa; /* White */
   display: grid;
   position: relative;
   justify-content: center;
   align-items: center;
+  max-width: 900px;
+  background-color: #f8f9fa; /* White */
+  border-radius: 8px; /* Rounded corners for images */
   grid-template-columns: 1fr 2fr; /* Two columns: 1 part text, 2 parts images */
   gap: 3vh;
   padding: 3vh;
