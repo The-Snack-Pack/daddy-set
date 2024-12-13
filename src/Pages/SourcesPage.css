@@ -11,7 +11,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .title-banner {
@@ -34,7 +34,7 @@
 }
 
 .title-banner:hover{
-  color: #7fbee1; /* Light pink hover effect */
+  color: #7fbee1;
 }
 
 .source-grid-container {

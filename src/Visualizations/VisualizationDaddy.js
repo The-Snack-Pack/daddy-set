@@ -189,22 +189,25 @@ const VisualizationDaddy = () => {
           layout={{
             title: {
               text: "The 'Daddy' Effect",
-              font: { family: 'Satisfy', size: 30, color: '#ffffff' },
+              font: { family: 'Satisfy', size: 30, color: 'black', weight:'bold' },
               x: 0.5,
             },
             xaxis: {
-              title: { text: 'IMDb Average Ratings (Their Top 4 Movie)', font: { family: 'Lato', size: 16, color: '#ffffff' } },
+              title: { text: 'IMDb Average Ratings (Their Top 4 Movie)', font: { family: 'Lato', size: 16, color: 'black' } },
               gridcolor: '#ffcccc',
               zerolinecolor: '#ffffff',
             },
             yaxis: {
-              title: { text: 'Best Male Actors Rankings', font: { family: 'Lato', size: 16, color: '#ffffff' } },
+              title: { text: 'Best Male Actors Rankings', font: { family: 'Lato', size: 16, color: 'black' } },
               gridcolor: '#ffcccc',
               zerolinecolor: '#ffffff',
               autorange: 'reversed',
             },
-            paper_bgcolor: '#fb577c',
-            plot_bgcolor: 'white',
+            legend: {
+              font: {color:'black'},
+            },
+            paper_bgcolor: '#fff6f8',
+            plot_bgcolor: '#fff6f8',
           }}
           onClick={handleClick}
           style={{ width: '100%', height: '100%' }}

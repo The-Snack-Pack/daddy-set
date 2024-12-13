@@ -45,40 +45,92 @@ const VisualizationAge = () => {
     type: 'bar',
   });
 
+  const [trendline, setTrendline] = useState({
+    x: [],
+    y: [],
+    type: 'scatter',
+    mode: 'lines',
+    line: { color: '#fb577c', dash: 'dashdot' },
+    name: 'Trendline',
+  });
+
+
   useEffect(() => {
     if (actorData.length > 0) {
+      // Create x (age groups) and y (average popularity) values
+      const xValues = Object.keys(age_distribution);
+      const yValues = Object.values(age_distribution).map((values) =>
+        values.count > 0 ? (values.popularity / values.count).toFixed(0) : 0
+      );
+
+      // Calculate linear regression (simplified for demonstration)
+      const xNumeric = [35, 45, 55, 65, 75]; // Approximate midpoints for age groups
+      const yNumeric = yValues.map(Number);
+      const xMean = xNumeric.reduce((a, b) => a + b, 0) / xNumeric.length;
+      const yMean = yNumeric.reduce((a, b) => a + b, 0) / yNumeric.length;
+      const slope =
+        xNumeric.reduce((acc, x, i) => acc + (x - xMean) * (yNumeric[i] - yMean), 0) /
+        xNumeric.reduce((acc, x) => acc + (x - xMean) ** 2, 0);
+      const intercept = yMean - slope * xMean;
+      const trendlineY = xNumeric.map((x) => slope * x + intercept);
+
+      // Update the bar chart state
       setBarChart({
-        x: Object.keys(age_distribution),
-        y: Object.values(age_distribution).map((values) => {
-          return (values.popularity / values.count).toFixed(0);
-        }),
+        x: xValues,
+        y: yValues,
         type: 'bar',
+        name: 'Age Group Popularity',
+        text: yValues.map((value) => `${value}%`),
+        marker: {
+          color: '#7fbee1',
+          opacity: 0.6,
+        },
+      });
+
+      // Update the trendline state
+      setTrendline({
+        x: xValues,
+        y: trendlineY,
+        type: 'scatter',
+        mode: 'lines',
+        line: { color: '#fb577c', dash: 'dashdot' },
+        name: 'Trendline',
       });
     }
   }, [actorData]);
 
+
   return (
-      <div className="visualization-container">
-        <h1>It’s the Vibe, Not the Years</h1>
-        <div>
-          <CSVReader onDataParsed={handleDataParsed} />
-        </div>
-        <div className="plot-container">
-          <Plot
-              data={[barChart]}
-              layout={{
-                title: '',
-                xaxis: { title: 'Age groups' },
-                yaxis: { title: 'YouGov ratings for popularity (Average)' },
-                width: "800px",
-                height: "500px",
-                paper_bgcolor: '#fde2e4', // Light peach for the outer background
-                plot_bgcolor: '#ffc9c9',  // Soft coral for the chart area
-              }}
-              style={{ width: '100%', height: '100%' }}
-          />
-        </div>
+    <div>
+      <CSVReader onDataParsed={handleDataParsed} />
+      <div className="viz">
+        <Plot
+          data={[barChart, trendline]}
+          layout={{
+            xaxis: { title: 'Age Groups' },
+            yaxis: { title: 'YouGov Popularity (Average)' },
+            showlegend: false,
+            images: [
+              {
+                source: '../images/background.png', // Replace with your image path
+                x: 0,
+                y: 1,
+                xref: 'paper',
+                yref: 'paper',
+                sizex: 1,
+                sizey: 1,
+                opacity: 0.8,
+                layer: 'below',
+              },
+            ],
+            paper_bgcolor: '#fff6f8', // Light peach
+            plot_bgcolor: '#fff6f8',  // Light coral
+          }}
+          style={{ width: '100%', height: '100%' }}
+        />
+
       </div>
+    </div>
   );
 };
 

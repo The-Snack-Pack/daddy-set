@@ -1,8 +1,7 @@
-/* Container for the Visualization */
-.visualization-container {
-
-}
-
-.plot-container {
-
+.viz {
+  display: grid;
+  align-items: center; /* Center vertically */
+  margin: 0; /* Center the container itself */
+  border-radius: 12px;
+  padding: 5vh;
 }
